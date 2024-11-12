@@ -1,0 +1,35 @@
+body {
+    background-color: #f8e6d0;
+    margin-right: 23em;
+    margin-left: 23em;
+    padding-top: 8em;
+    background-image: url(https://cdn.pixabay.com/photo/2012/04/24/23/18/circle-41073_1280.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    background-color:#deb887;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 60px;
+}
+
+p {
+    text-decoration: none;
+    color: #020101;
+    font-size: larger;
+}
+
+button{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    height: 30px;
+    color: rgb(68, 68, 68);
+}
+
+input{
+    height: 30px;
+}
+

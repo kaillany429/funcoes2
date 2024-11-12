@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Funções 2</title>
+</head>
+
+<body id="corpo">
+    <div class="container">
+        <h1 id="titulo">Funções - Javascript</h1>
+
+        <button class="button" onclick="toggleText()"> Mostrar / Ocultar o texto</button>
+        <!-- um botao para ocultar o texto -->
+        <p id="toggleText"> Este exemplo de texto será exibido e ocultado. </p>
+        <!-- texto do botao  -->
+        <h2 id="subtitulo">Calculadora Simples</h2>
+        <input type="number" name="" id="num1" placeholder="Número 1">
+        <!-- botao do primeiro valer que vai ser somado -->
+        <input type="number" name="" id="num2" placeholder="Número 2">
+        <!-- botao do segundo valor que vai ser somado  -->
+        <button class="button" onclick="sumCalculate()">Calcular</button>
+        <!-- botao do calculo  -->
+        <p id="sumResult">Soma:</p>
+        <!-- aonde vai sair o resultado  -->
+
+        <button onclick="mudarTema()">Mudar Tema</button>
+    </div>
+
+
+    <script>
+        // Alternar visibilidade 
+        function toggleText() {
+            const text = document.getElementById("toggleText");
+            text.style.display = text.style.display === "none" ? "block" : "none";
+        }
+
+        // Função Soma / Sum
+
+        function sumCalculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const resultado = num1 + num2
+
+            document.getElementById("sumResult").innerText = "Soma:" + (isNaN(resultado) ? "Digite números válidos" : resultado);
+
+            // innerText para ler ou modificar um texto de um elemento html
+
+            // isNaN significa "is not a number"uso quando o usuarios digitar algo que nao é um numero
+
+        }
+
+        function mudarTema() {
+            const corpo = document.getElementById("corpo")
+            const titulo = document.getElementById("titulo")
+            const subtitulo = document.getElementById("subtitulo")
+            const toggletext = document.getElementById("toggleText")
+
+            titulo.style.color = titulo.style.color === "black" ? "white" : "black"
+             subtitulo.style.color = subtitulo.style.color === "black" ? "white" : "black"
+            //   corpo.style.backgroundColor = corpo.style.backgroundColor === "blue" ? "red" : "blue"
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
